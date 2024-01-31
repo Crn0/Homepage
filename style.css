@@ -1,6 +1,17 @@
+:root {
+    --profile-background-color: cornflowerblue;
+    --name-color: aliceblue;
+    --about-me-background-color:lightgrey;
+}
+
 @font-face {
-    font-family: "Playfair";
-    src: url("./fonts/play-fair/PlayfairDisplay-VariableFont_wght.ttf") format(TrueType);
+    font-family: "Playfair-regular";
+    src: url("./fonts/play-fair/static/PlayfairDisplay-Regular.ttf") format(TrueType);
+}
+
+@font-face {
+    font-family: "Playfair-bold-italic";
+    src: url("./fonts/play-fair/static/PlayfairDisplay-BoldItalic.ttf") format(TrueType);
 }
 
 @font-face {
@@ -8,9 +19,10 @@
     src: url("./fonts/play-fair/static/PlayfairDisplay-Bold.ttf") format(TrueType);
 }
 
+
 @font-face {
-    font-family: "Roboto";
-    src: url("./fonts/roboto/Roboto-Regular.ttf") format(TrueType);
+    font-family: "Roboto-bold";
+    src: url("./fonts/roboto/Roboto-Bold.ttf") format(TrueType);
 }
 
 @font-face {
@@ -18,4 +30,253 @@
     src: url("./fonts/roboto/Roboto-Light.ttf") format(TrueType);
 }
 
+/* header */
 
+header {
+    display: flex;   
+}
+
+.profile-picture {
+    position: relative;
+    background-color: var(--profile-background-color);
+}
+
+.profile-picture > h2 {
+    color: var(--name-color);
+    font-family: "Playfair-bold-italic", sans-serif;
+
+    font-size: 2rem;
+}
+
+.profile-picture > picture > img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.about-me {
+    display: grid;
+    place-items: center;
+    background-color: var(--about-me-background-color);
+}
+
+.information {
+    display: grid;
+    justify-items: center;
+}
+
+.information > h2 {
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 2.5rem;
+}
+
+.information > p {
+    font-family: "Playfair-regular";
+    font-size: 1.5rem;
+}
+
+.profile-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* main */
+
+.my-projects {
+    display: grid;
+}
+
+.project-container {
+    display: grid;
+}
+
+.project {
+    border: 1px solid red;
+}
+/* project image frame */
+.project-image {
+    border-bottom: 1px solid red;
+}
+/* project img */
+.project-image > img {
+    display: block;
+    object-fit: fill;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.project-details {
+    position: relative;
+}
+
+  /* project name */
+.project-details > h2 {
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 1.5rem;
+}
+/* project description */
+.project-details > p {
+    font-family: "Playfair-regular";;
+    font-size: 1rem;
+}
+
+/* footer */
+
+.contact-me {
+    display: grid;
+}
+
+.contact-container {
+    display: grid;
+    background: aliceblue;
+    box-shadow: 0px 3px 5px 0px;
+}
+
+.keep-touch {
+    display: grid;
+    place-items: center;
+}
+
+.phone-number {
+    display: flex;
+    gap: 5px;
+}
+
+.email-address {
+    display: flex;
+    gap: 5px;
+}
+
+/* header */
+.keep-touch > h2 {
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 1.5rem;
+ }
+
+/* details */
+.keep-touch > p {
+    font-family: "Playfair-regular";
+    font-size: 1rem;
+}
+
+/* address */
+.address > p {
+    font-family: "Playfair-regular";
+    font-size: 1rem;
+}    
+
+/* phone number */
+.phone-number > p {
+    font-family: "Playfair-regular";
+    font-size: 1rem;
+}  
+
+/* email address */
+.email-address > p {
+    font-family: "Playfair-regular";
+    font-size: 1rem;
+}  
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    /* header */
+    header {
+        flex-direction: column;
+    }
+    /* picture frame */
+    .profile-picture {
+        padding: 0.3rem;
+    }
+    /* user image */
+    .profile-picture > picture > img {
+        max-width: 100%;
+    }
+    /* user name */
+    .profile-picture > h2 {
+        position: absolute;
+       
+        bottom: -8%;
+        right: 2%;
+    }
+    /* user info */
+    .information {
+        padding: 2rem;
+    }
+    /* user links */
+    .profile-links {
+        margin-bottom: 0.5rem;
+    }
+
+    /* main */
+    main {
+        margin-bottom: 50px;
+    }
+
+    .my-projects {
+        place-items: center;
+        
+    }
+
+    .project-container {
+        grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    /* icon */
+    .project-details > a > .devicon-github-original {
+        position: absolute;
+        top: 0;
+        right: 10%;
+    }
+    /* icon */
+    .project-details > a > .fa-solid {
+        position: absolute;
+        top: 0;
+        right: 2%;
+    }
+    /* project name */
+    .project-details > h2 {
+        margin-left: 2rem;
+    }
+    /* project description */
+    .project-details > p {
+        margin-left: 1rem;
+    }
+
+    /* footer */
+    .contact-me {
+        grid-template-rows: 0.1fr 1.5fr;
+        position: relative;
+        padding: 1rem;
+        background: aliceblue;
+    }
+    
+    .contact-container > div:nth-child(n + 1) {
+        margin-left: 10px;
+    }
+
+    .contact-container {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .footer-links {
+        padding: 1rem;
+    }
+
+    .footer-img-container {
+        position: absolute;
+        top: 340px;
+        z-index: 1;
+    }
+
+    .footer-img-container > img {
+        height: 100%;
+        max-width: 100%;
+    }
+}

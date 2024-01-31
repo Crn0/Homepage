@@ -12,12 +12,13 @@
 
     <header>
         <section class="profile-picture">
-            <img 
-            srcset="./images/cats/cat-640w.jpg 640w, 
-                    ./images/cats/cat-1279w.jpg 1279w, ./images/cats/cat-1920w 1920w" 
-            src="./images/cats/cat-640w.jpg" 
-            
-            alt="A grey kitten">
+            <picture>
+                <source media="(max-width: 600px)" srcset="./images/cats/cat-640w.jpg">
+                <source media="(max-width: 1000px)" srcset="./images/cats/cat-1279w.jpg ">
+                <source media="(min-width: 1001px)" srcset="./images/cats/cat-1920w.jpg">
+
+                <img src="./images/cats/cat-1920w.jpg" alt="Gray kitten">
+            </picture>
 
             <h2>Isaac Gray</h2>
         </section>
@@ -30,13 +31,13 @@
 
             <div class="profile-links">
                 <a href="https://github.com/EssenceCode" target="_blank" rel="noopener noreferrer">
-                    <i class="devicon-github-original"></i>
+                    <i class="devicon-github-original icons"></i>
                 </a>
                 <a href="">
-                    <i class="devicon-linkedin-plain"></i>
+                    <i class="devicon-linkedin-plain icons"></i>
                 </a>
                 <a href="">
-                    <i class="devicon-twitter-original"></i>
+                    <i class="devicon-twitter-original icons"></i>
                 </a>
             </div>
           
@@ -53,12 +54,12 @@
                     </div>
 
                     <div class="project-details">
-                        <h3>Tic Tac Toe</h3>
+                        <h2>Tic Tac Toe</h2>
                         <a href="https://github.com/EssenceCode" target="_blank" rel="noopener noreferrer">
-                            <i class="devicon-github-original"></i>
+                            <i class="devicon-github-original icons"></i>
                         </a>
                         <a href="https://essencecode.github.io/Tic-Tac-Toe/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square icons"></i>
                         </a>
                         <p>Short description of the project</p>
                     </div>
@@ -69,12 +70,12 @@
                     </div>
 
                     <div class="project-details">
-                        <h3>Calculator</h3>
+                        <h2>Calculator</h2>
                         <a href="https://github.com/EssenceCode" target="_blank" rel="noopener noreferrer">
-                            <i class="devicon-github-original"></i>
+                            <i class="devicon-github-original icons"></i>
                         </a>
                         <a href="https://essencecode.github.io/calculator/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square icons"></i>
                         </a>
                         <p>Short description of the project</p>
                     </div>
@@ -85,12 +86,12 @@
                     </div>
 
                     <div class="project-details">
-                        <h3>Battleship</h3>
+                        <h2>Battleship</h2>
                         <a href="https://github.com/EssenceCode" target="_blank" rel="noopener noreferrer">
-                            <i class="devicon-github-original"></i>
+                            <i class="devicon-github-original icons"></i>
                         </a>
                         <a href="https://essencecode.github.io/Battleship/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square icons"></i>
                         </a>
                         <p>Short description of the project</p>
                     </div>
@@ -101,12 +102,12 @@
                     </div>
 
                     <div class="project-details">
-                        <h3>Etch-A-Sketch</h3>
+                        <h2>Etch-A-Sketch</h2>
                         <a href="https://github.com/EssenceCode" target="_blank" rel="noopener noreferrer">
-                            <i class="devicon-github-original"></i>
+                            <i class="devicon-github-original icons"></i>
                         </a>
                         <a href="https://essencecode.github.io/Etch-A-Sketch/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square icons"></i>
                         </a>
                         <p>Short description of the project</p>
                     </div>
@@ -117,12 +118,12 @@
                     </div>
 
                     <div class="project-details">
-                        <h3>Todo list</h3>
+                        <h2>Todo list</h2>
                         <a href="https://github.com/EssenceCode" target="_blank" rel="noopener noreferrer">
-                            <i class="devicon-github-original"></i>
+                            <i class="devicon-github-original icons"></i>
                         </a>
                         <a href="https://essencecode.github.io/Todo-list/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square icons"></i>
                         </a>
                         <p>Short description of the project</p>
                     </div>
@@ -133,12 +134,12 @@
                     </div>
 
                     <div class="project-details">
-                        <h3>Weather app</h3>
+                        <h2>Weather app</h2>
                         <a href="https://github.com/EssenceCode" target="_blank" rel="noopener noreferrer">
-                            <i class="devicon-github-original"></i>
+                            <i class="devicon-github-original icons"></i>
                         </a>
                         <a href="https://essencecode.github.io/Weather-App/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <i class="fa-solid fa-arrow-up-right-from-square icons"></i>
                         </a>
                         <p>Short description of the project</p>
                     </div>
@@ -150,31 +151,54 @@
     <footer>
         <section class="contact-me">
             <div class="contact-container">
-                <h2>Contact me</h2>
+                <div class="keep-touch">
+                    <h2>Contact me</h2>
+                    <p>
+                        Please get in touch if you think
+                        our work could be mutually
+                        beneficial!
+                    </p>
+                </div>
 
-                <p>
-                    Please get in touch if you think
-                    our work could be mutually
-                    beneficial!
-                </p>
+                <div class="address">
+                    <p>
+                        1234 Random Road, Random Town, California 12345
+                    </p>
+                </div>
 
-                <p>
-                    1234 Random Road, Random Town, California 12345
-                </p>
+                <div class="phone-number">
+                    <img src="./images/svg-icons/phone.svg" alt="phone" width="22px" height="auto">
 
-                <p>
-                    555-555-555
-                </p>
+                    <p>
+                        555-555-555
+                    </p>
+                </div>
                 
-                <p>
-                    Isaac.gray@example.com
-                </p>
+                <div class="email-address">
+                    <img src="./images/svg-icons/email.svg" alt="email" width="22px" height="auto">
+
+                    <p>
+                        Isaac.gray@example.com
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="https://github.com/EssenceCode" target="_blank" rel="noopener noreferrer">
+                        <i class="devicon-github-original icons"></i>
+                    </a>
+                    <a href="">
+                        <i class="devicon-linkedin-plain icons"></i>
+                    </a>
+                    <a href="">
+                        <i class="devicon-twitter-original icons"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="footer-img-container">
                 <img 
                 srcset="./images/cats/cat-640w.jpg 640w, 
-                        ./images/cats/cat-1279w.jpg 1279w, ./images/cats/cat-1920w 1920w" 
+                        ./images/cats/cat-1279w.jpg 1279w, ./images/cats/cat-1920w.jpg 1920w" 
                 src="./images/cats/cat-640w.jpg" 
                 
                 alt="A grey kitten">

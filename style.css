@@ -276,6 +276,7 @@ main {
 
 .project:hover {
     transform: scale(1.2) rotate(1turn);
+    z-index: 1;
 }
    
 

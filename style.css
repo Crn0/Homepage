@@ -1,7 +1,8 @@
 :root {
-    --header-background-color: cornflowerblue;
+    --header-background-color: #dd3314;
     --name-color: aliceblue;
-    --about-me-background-color:lightgrey;
+    --about-me-background-color:white;
+    --background-color:tomato;
 }
 
 @font-face {
@@ -122,15 +123,16 @@ main {
 }
 
 .project {
+    background: var(--background-color);
     border: 1px solid red;
     padding: 1rem;
 }
 /* project image frame */
 .project-image {
-    border-bottom: 1px solid red;
-    border-top: 1px solid red;
-    border-left: 1px solid red;
-    border-right: 1px solid red;
+    border-bottom: 1px solid var(--background-color);
+    border-top: 1px solid var(--background-color);
+    border-left: 1px solid var(--background-color);
+    border-right: 1px solid var(--background-color);
 }
 /* project img */
 .project-image > img {
@@ -250,6 +252,37 @@ main {
     justify-content: center;
     gap: 10px;
 }
+
+
+@keyframes onHover {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(2turn);
+    }
+}
+
+/* transition */
+
+.project {
+    transition: transform 900ms ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.2) rotate(1turn);
+}
+   
+
+i {
+    transition: transform 900ms ease-in-out;
+}
+
+i:hover {
+    transform: scale(1, 2) rotate(1turn) ;
+}
+   
 
 /* mobile */
 @media (max-width: 600px) {
